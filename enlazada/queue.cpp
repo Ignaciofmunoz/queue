@@ -19,10 +19,10 @@ void Enq(Queue&q,int val)
 int Deq(Queue&q)
 {
     Nodo *aux;
-    aux = q.f;      // aux apunta al inicio de la cola
+    aux = q.f;     
     int num = aux->dni;
     q.f =(q.f)->next;
-    delete(aux);          // libera memoria a donde apuntaba aux
+    delete(aux);          
 
     return num;
 }
@@ -42,7 +42,7 @@ void CoutQueue(Queue&q)
     Nodo *aux;
     aux = q.f;
 
-    while( aux != NULL )//porbar con !isemtpy
+    while( aux != NULL )
     {
         cout<< aux->dni<<endl;
         aux = aux->next;
