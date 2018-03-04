@@ -1,5 +1,5 @@
 #include <iostream>
-#include "C:\Users\nacho\Desktop\multiarchivos queue\cola continua\queuecont.h"
+#include "queue.h"
 #include <fstream>//usando el ifstream  std de iostream no inicializaba bien
 #define cutnum 30000000
 #define maxprocedures 5
@@ -8,7 +8,7 @@ using namespace std;
 void CargarDNIs(Queue&q)
 {
     ifstream in("DNI.txt");
-    for(int  dni; in >> dni ;)//creo q no voy a poder poner int a secas
+    for(int  dni; in >> dni ;)
         Enq(q,dni);
 }
 void Reorgxnum(Queue&q,Queue&qhigh,Queue&qless)
