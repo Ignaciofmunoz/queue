@@ -1,7 +1,6 @@
 #include <iostream>
 #include <Cassert>
-//#include "C:\Users\nacho\Desktop\multiarchivos queue\cola continua\queuecont.h"
-#include "C:\Users\nacho\Desktop\multiarchivos queue\colaenlazada\queuepointer.h"
+#include "queue.h"
 #define SIZE 15
 using namespace std;
 
