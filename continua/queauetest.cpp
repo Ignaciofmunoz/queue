@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 using namespace Queue;
-using::Queue::Nodo; //en esto tengo dudas
+using::Queue::Nodo; //en esto tengo dudas de si es queue::nodo o queaue::queaue
 using::Queue::Queue;
 Queue q ;//nota al profesor : aca el compilador me advierte de que la referencia es ambigua
 cout<<"se carga  la cola "<<endl;
@@ -19,7 +19,7 @@ for(int i=0;i<SIZE;i++)
 }
 CoutQueue(q);
 cout<<"se desencolan todos los elementos "<<endl<<endl;
-for(int i=0;i<SIZE;i++)//probar con 15
+for(int i=0;i<SIZE;i++)
 {
    cout<<"se desencola:\t"<<Deq(q)<<endl;
 }
