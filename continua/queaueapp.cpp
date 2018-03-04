@@ -7,7 +7,7 @@ using namespace std;
 void CargarDNIs(Queue&q)
 {
     ifstream in("DNI.txt");
-    for(int  dni; in >> dni ;)//creo q no voy a poder poner int a secas
+    for(int  dni; in >> dni ;)
         Enq(q,dni);
 }
 void Reorgxnum(Queue&q,Queue&qhigh,Queue&qless)
