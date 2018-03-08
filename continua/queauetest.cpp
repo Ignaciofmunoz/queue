@@ -1,6 +1,6 @@
 #include <iostream>
 #include <Cassert>
-//#include "queue.h"
+#include "queue.h"
 
 #define SIZE 15
 using namespace std;
