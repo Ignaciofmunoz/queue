@@ -10,16 +10,13 @@ struct Nodo
 };
 struct Queue
 {
-    Nodo *f;
-    Nodo *b;
+    Nodo *f=NULL;
+    Nodo *b=NULL;
 };
-
-
 void Enq(Queue&,int);
 int Deq(Queue&);
 void CoutQueue(Queue&);
 bool IsEmpty(const Queue&);
 void DeleteQueue( Queue&);
-
 }
 #endif // QUEUE_H_INCLUDED
