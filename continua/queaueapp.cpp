@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
-//#include "queue.h"
-#include "C:\Users\nacho\Desktop\entrega tp\queaue\queuecont\queue.h"
+#include "queue.h"
 #define cutnum 30000000
 #define maxprocedures 5
 using namespace std;
