@@ -1,17 +1,21 @@
 #include <iostream>
+#include <fstream>
 #include "queue.h"
-#include <fstream>//usando el ifstream  std de iostream no inicializaba bien
+
+
 #define cutnum 30000000
 #define maxprocedures 5
 using namespace std;
+using namespace Queue;
 
-void CargarDNIs(Queue&q)
+Queue::Queue q ;
+void CargarDNIs(Queue::Queue&q)
 {
     ifstream in("DNI.txt");
     for(int  dni; in >> dni ;)
         Enq(q,dni);
 }
-void Reorgxnum(Queue&q,Queue&qhigh,Queue&qless)
+void Reorgxnum(Queue::Queue&q,Queue::Queue&qhigh,Queue::Queue&qless)
 {
     while(not IsEmpty(q))
     {
@@ -22,7 +26,7 @@ void Reorgxnum(Queue&q,Queue&qhigh,Queue&qless)
             Enq(qless,num);
     }
 }
-void Reorgxord(Queue&q,Queue&qtod,Queue&qtom){
+void Reorgxord(Queue::Queue&q,Queue::Queue&qtod,Queue::Queue&qtom){
     int aux;
 for(int i=0;i<maxprocedures;i++){
      aux =Deq(q);
@@ -35,7 +39,7 @@ for(int i=0;i<maxprocedures;i++){
 
 int main()
 {
-    Queue q,qless,qhigh,qltod,qltom,qhtod,qhtom;
+    Queue::Queue q,qless,qhigh,qltod,qltom,qhtod,qhtom;
     CargarDNIs(q);
     cout<<"Estos son los turnos entregados en el dia de la fecha "<<endl<<endl;
     cout<<"NOTA:Por la naturaleza del tramite solo se atienden  "<<maxprocedures <<"  turnos al dia."<<endl;
