@@ -20,3 +20,4 @@ void Increase(int& );
 void Decrease(int& );
 }
 #endif // QUEUECONT_H_INCLUDED
+
