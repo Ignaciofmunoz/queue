@@ -1,5 +1,5 @@
 #include <iostream>
-#include "queue.h"
+#include "C:\Users\nacho\Desktop\entrega tp\queaue\queaueenlazada\queaue.h"
 using namespace std;
 
 namespace Queue
@@ -19,10 +19,10 @@ void Enq(Queue&q,int val)
 int Deq(Queue&q)
 {
     Nodo *aux;
-    aux = q.f;     
+    aux = q.f;
     int num = aux->dni;
     q.f =(q.f)->next;
-    delete(aux);          
+    delete(aux);
 
     return num;
 }
