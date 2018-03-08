@@ -1,5 +1,5 @@
 #include <iostream>
-#include "C:\Users\nacho\Desktop\entrega tp\queaue\queaueenlazada\queaue.h"
+#include "queaue.h"
 using namespace std;
 
 namespace Queue
@@ -10,7 +10,7 @@ void Enq(Queue&q,int val)
     aux->dni= val;
     aux->next = NULL;
     if( IsEmpty(q))
-        q.f = aux;   // encola el primero elemento
+        q.f = aux;   
     else
     q.b->next = aux;
     q.b= aux;
