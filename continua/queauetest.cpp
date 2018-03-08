@@ -1,72 +1,56 @@
 #include <iostream>
-#include "queue.h"
+#include <Cassert>
+//#include "queue.h"
+
+#define SIZE 15
 using namespace std;
-namespace Queue{
-void Enq(Queue&q,int val)
+using namespace Queue;
+Queue::Queue q ;
+int main()
 {
-    if(IsFull(q)==false){
-        q.a.at(q.f)=val;
-        Increase(q.f);
-        q.e++;}
-}
-int Deq(Queue&q)
-{    if(IsEmpty(q)==false)
-    {
-        int aux=q.a.at(q.b);
-        Increase(q.b);
-        q.e--;
-        return aux;}
-}
-void CoutQueue(Queue&q)
+cout<<"se carga  la cola "<<endl;
+for(int i=0;i<SIZE;i++)
 {
-    if(IsFull(q))
-    {
-        int a=q.b;//como esta llena los indices son iguales
-        int z=q.f;
-        Decrease(z);
-        cout<<q.a.at(a)<<endl;
-        do
-        {Increase(a);
-            cout<<q.a.at(a)<<endl;}while(a!=z);
-    }
-    else
-    {
-        if( not IsEmpty(q))
-        {
-            for(int i=q.b; i<q.f; Increase(i))
-            {
-                cout<<q.a.at(i)<<endl;
-            }
-        }
-    }
-    cout<<endl;
+   Enq(q,i);
 }
-bool IsEmpty(Queue&q)
+cout<<"----La cola contiene"<<endl;
+CoutQueue(q);
+cout<<"se desencolan todos los elementos "<<endl<<endl;
+for(int i=0;i<SIZE;i++)
 {
-    if ((q.e)==0)
-       return true;
-    else
-        return false;
+   cout<<"se desencola:\t"<<Deq(q)<<endl;
 }
-void Increase(int& n)
-{
-    if (n==SIZE-1)
-        n= 0;
-    else
-        n++;
-}
-void Decrease(int& n)
-{
-    if (n==0)
-        n= SIZE-1;
-    else
-        n--;
-}
-bool IsFull(Queue&q)
-{
-    if (q.e==SIZE)
-        return true;
-    else
-        return false;
-}
+//assert(IsEmpty(q));
+cout<<"----La cola contiene"<<endl;
+CoutQueue(q);
+cout<<endl<<"se encolan el 1, 46,126 y 6232"<<endl<<endl;
+Enq(q,1);
+Enq(q,46);
+Enq(q,126);
+Enq(q,6232);
+assert((Deq(q)==1));
+assert((Deq(q)==46));
+assert((Deq(q)==126));
+assert((Deq(q)==6232));
+Enq(q,1);
+Enq(q,46);
+Enq(q,126);
+Enq(q,6232);
+cout<<"----La cola contiene"<<endl;
+CoutQueue(q);
+cout<<"se desencola dos(2) veces"<<endl<<endl;
+assert(Deq(q)==1);
+Enq(q,1);
+cout<<"se desencola:\t"<<Deq(q)<<endl;
+cout<<"se desencola:\t"<<Deq(q)<<endl<<endl;
+cout<<"----La cola contiene"<<endl;
+CoutQueue(q);
+cout<<"se desencola dos(2) veces mas "<<endl<<endl;
+cout<<"se desencola:\t"<<Deq(q)<<endl;
+cout<<"se desencola:\t"<<Deq(q)<<endl<<endl;
+cout<<"----La cola contiene"<<endl;
+CoutQueue(q);
+//assert(IsEmpty(q));
+cout<<"----FIN DEL TEST------"<<endl;
+return 0;
 }
