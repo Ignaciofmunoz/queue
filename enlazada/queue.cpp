@@ -26,17 +26,7 @@ int Deq(Queue&q)
 
     return num;
 }
-void DeleteQueue( Queue &q)
-{
-     Nodo *aux;
-     while( not IsEmpty(q))
-     { aux = q.f;
-      q.f = aux->next;
-      delete(aux);}
-     q.f = NULL;
-     q.b = NULL;
 
-}
 void CoutQueue(Queue&q)
 {
     Nodo *aux;
