@@ -1,8 +1,7 @@
 #include <iostream>
 #include <Cassert>
-//#include "queue.h"
-#include "C:\Users\nacho\Desktop\entrega tp\queaue\queuecont\queue.h"
-//#include "C:\Users\nacho\Desktop\entrega tp\queaue\queaueenlazada\queaue.h"
+#include "queue.h"
+
 #define SIZE 15
 using namespace std;
 using namespace Queue;
