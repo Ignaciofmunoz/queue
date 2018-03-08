@@ -20,7 +20,7 @@ for(int i=0;i<SIZE;i++)
 {
    cout<<"se desencola:\t"<<Deq(q)<<endl;
 }
-//assert(IsEmpty(q));
+assert(IsEmpty(q));
 cout<<"----La cola contiene"<<endl;
 CoutQueue(q);
 cout<<endl<<"se encolan el 1, 46,126 y 6232"<<endl<<endl;
@@ -50,7 +50,7 @@ cout<<"se desencola:\t"<<Deq(q)<<endl;
 cout<<"se desencola:\t"<<Deq(q)<<endl<<endl;
 cout<<"----La cola contiene"<<endl;
 CoutQueue(q);
-//assert(IsEmpty(q));
+assert(IsEmpty(q));
 cout<<"----FIN DEL TEST------"<<endl;
 return 0;
 }
