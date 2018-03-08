@@ -70,4 +70,3 @@ bool IsFull(Queue&q)
         return false;
 }
 }
-
